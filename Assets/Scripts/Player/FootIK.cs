@@ -29,11 +29,12 @@ public class FootIK : MonoBehaviour
     public float maxPelvisDrop = 0.45f;
 
     // runtime
-    Animator animator;
-    float pelvisOriginOffset;
-    float pelvisDrop;
-    float currentIKWeight = 1f;
-    float ikWeightVelocity;
+    private Animator animator;
+    private PlayerController pc;
+    private float pelvisOriginOffset;
+    private float pelvisDrop;
+    private float currentIKWeight = 1f;
+    private float ikWeightVelocity;
 
     struct FootState
     {
@@ -58,6 +59,7 @@ public class FootIK : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        pc = GetComponent<PlayerController>();
         
         Transform leftFootT = animator.GetBoneTransform(HumanBodyBones.LeftFoot);
         Transform rightFootT = animator.GetBoneTransform(HumanBodyBones.RightFoot);
@@ -95,12 +97,12 @@ public class FootIK : MonoBehaviour
         if (animator == null) return;
 
         float speedPercent = 0f;
-        if (animator.HasParameterOfType("speedPercent", AnimatorControllerParameterType.Float))
-            speedPercent = animator.GetFloat("speedPercent");
+        if (animator.HasParameterOfType(AnimDefines.PARAMETER_SPEED_PERCENT, AnimatorControllerParameterType.Float))
+            speedPercent = animator.GetFloat(AnimDefines.PARAMETER_SPEED_PERCENT);
         else
             speedPercent = animator.velocity.magnitude;
 
-        float ikTarget = (speedPercent > 0.1f) ? 0f : 1f;
+        float ikTarget = (speedPercent > 0.1f || pc.isGrounded == false) ? 0f : 1f;
         currentIKWeight = Mathf.SmoothDamp(currentIKWeight, ikTarget, ref ikWeightVelocity, ikWeightSmoothTime);
 
         float effectiveCast = Mathf.Lerp(0.02f, raycastDistance, currentIKWeight);

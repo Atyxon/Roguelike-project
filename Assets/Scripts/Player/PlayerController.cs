@@ -26,9 +26,14 @@ public class PlayerController : MonoBehaviour {
 	public Transform groundCheck;
 	public float groundDistance = 0.3f;
 	public LayerMask groundMask;
+	
+	[Header("Particles")]
+	public ParticleSystem dustParticles;
+	public ParticleSystem jumpParticles;
 
-	bool isGrounded;
-	void Start () {
+	public bool isGrounded;
+	void Start () 
+	{
 		animator = GetComponent<Animator> ();
 		cameraT = Camera.main.transform;
 		controller = GetComponent<CharacterController> ();
@@ -40,6 +45,8 @@ public class PlayerController : MonoBehaviour {
 		var inputDir = input.normalized;
 		var running = Input.GetKey (KeyCode.LeftShift);
 
+		var dustParticlesEmission = dustParticles.emission;
+		dustParticlesEmission.enabled = (currentSpeed > runSpeed*0.7f) && controller.isGrounded;
 		Move (inputDir, running);
 
 		if (Input.GetKeyDown (KeyCode.Space)) {
@@ -81,6 +88,7 @@ public class PlayerController : MonoBehaviour {
 	{
 		if (controller.isGrounded) 
 		{
+			jumpParticles.Play();
 			var jumpVelocity = Mathf.Sqrt (-2 * gravity * jumpHeight);
 			velocityY = jumpVelocity;
 		}
