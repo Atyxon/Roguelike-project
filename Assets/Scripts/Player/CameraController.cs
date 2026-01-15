@@ -1,3 +1,4 @@
+using Console;
 using UnityEngine;
 
 namespace Player
@@ -49,6 +50,8 @@ namespace Player
 
         private void HandleRotation()
         {
+            if (DevConsole.Instance != null && DevConsole.Instance.IsConsoleActive()) return;
+            
             _yaw += Input.GetAxis("Mouse X") * mouseSensitivity;
             _pitch -= Input.GetAxis("Mouse Y") * mouseSensitivity;
             _pitch = Mathf.Clamp(_pitch, pitchMinMax.x, pitchMinMax.y);

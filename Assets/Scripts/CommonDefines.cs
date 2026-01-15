@@ -8,3 +8,8 @@ public static class GameobjectTags
 {
     public static string TAG_LOOK_TARGET = "lookTarget";
 }
+
+public static class Scenes
+{
+    public static string DEV_CONSOLE = "DevConsoleScene";
+}

@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using Console;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -37,24 +39,44 @@ public class PlayerController : MonoBehaviour {
 		animator = GetComponent<Animator> ();
 		cameraT = Camera.main.transform;
 		controller = GetComponent<CharacterController> ();
+		LoadDevConsole();
 	}
 
-	void Update () 
+	void Update()
 	{
-		var input = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical"));
-		var inputDir = input.normalized;
-		var running = Input.GetKey (KeyCode.LeftShift);
+		Vector2 input = Vector2.zero;
+		bool running = false;
+		bool jumpPressed = false;
+
+		bool canReadInput = DevConsole.Instance == null || !DevConsole.Instance.IsConsoleActive();
+
+		if (canReadInput)
+		{
+			input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+			running = Input.GetKey(KeyCode.LeftShift);
+			jumpPressed = Input.GetKeyDown(KeyCode.Space);
+		}
+
+		Vector2 inputDir = input.normalized;
+
+		Move(inputDir, running);
+
+		if (jumpPressed)
+			Jump();
 
 		var dustParticlesEmission = dustParticles.emission;
-		dustParticlesEmission.enabled = (currentSpeed > runSpeed*0.7f) && controller.isGrounded;
-		Move (inputDir, running);
+		dustParticlesEmission.enabled = (currentSpeed > runSpeed * 0.7f) && controller.isGrounded;
 
-		if (Input.GetKeyDown (KeyCode.Space)) {
-			Jump ();
-		}
-		
-		var animationSpeedPercent = ((running) ? currentSpeed / runSpeed : currentSpeed / walkSpeed * .5f);
-		animator.SetFloat(AnimDefines.PARAMETER_SPEED_PERCENT, animationSpeedPercent, speedSmoothTime, Time.deltaTime);
+		float animationSpeedPercent = running 
+			? currentSpeed / runSpeed 
+			: currentSpeed / walkSpeed * 0.5f;
+
+		animator.SetFloat(
+			AnimDefines.PARAMETER_SPEED_PERCENT,
+			animationSpeedPercent,
+			speedSmoothTime,
+			Time.deltaTime
+		);
 	}
 
 	void Move(Vector2 inputDir, bool running) 
@@ -103,5 +125,12 @@ public class PlayerController : MonoBehaviour {
 			return float.MaxValue;
 		}
 		return smoothTime / airControlPercent;
+	}
+	public void LoadDevConsole()
+	{
+		if (!SceneManager.GetSceneByName(Scenes.DEV_CONSOLE).isLoaded)
+		{
+			SceneManager.LoadSceneAsync(Scenes.DEV_CONSOLE, LoadSceneMode.Additive);
+		}
 	}
 }
