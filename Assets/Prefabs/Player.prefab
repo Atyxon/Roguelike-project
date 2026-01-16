@@ -213,8 +213,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FreeFlyCamera
   moveSpeed: 10
-  lookSpeed: 2
   boostMultiplier: 2
+  lookSpeed: 2
 --- !u!1 &629294828763341195
 GameObject:
   m_ObjectHideFlags: 0
@@ -6259,6 +6259,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 1
+  freeCamObj: {fileID: 0}
   dustParticles: {fileID: 806855818564627409}
   jumpParticles: {fileID: 8537780481758169172}
   isGrounded: 0
@@ -6493,7 +6494,6 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
   - {fileID: 2100000, guid: 9cb78898d600cd04686f8ccb4ed3ad89, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0

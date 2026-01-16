@@ -28,6 +28,11 @@ public class PlayerController : MonoBehaviour {
 	public Transform groundCheck;
 	public float groundDistance = 0.3f;
 	public LayerMask groundMask;
+
+	[Header("Free Cam")] 
+	public Transform freeCamObj;
+
+	private bool _isFreeCamActive = false;
 	
 	[Header("Particles")]
 	public ParticleSystem dustParticles;
@@ -44,13 +49,14 @@ public class PlayerController : MonoBehaviour {
 
 	void Update()
 	{
-		Vector2 input = Vector2.zero;
-		bool running = false;
-		bool jumpPressed = false;
+		var input = Vector2.zero;
+		var running = false;
+		var jumpPressed = false;
 
-		bool canReadInput = DevConsole.Instance == null || !DevConsole.Instance.IsConsoleActive();
-
-		if (canReadInput)
+		var isConsoleActive = DevConsole.Instance != null && DevConsole.Instance.IsConsoleActive();
+		var canReadInput = isConsoleActive == false && _isFreeCamActive == false;
+		
+		if (canReadInput == true)
 		{
 			input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 			running = Input.GetKey(KeyCode.LeftShift);
@@ -133,4 +139,18 @@ public class PlayerController : MonoBehaviour {
 			SceneManager.LoadSceneAsync(Scenes.DEV_CONSOLE, LoadSceneMode.Additive);
 		}
 	}
+
+	public void ToggleFreeCam()
+	{
+		_isFreeCamActive = !_isFreeCamActive;
+		freeCamObj.gameObject.SetActive(_isFreeCamActive);
+		if (_isFreeCamActive)
+		{
+			freeCamObj.position = cameraT.position;
+			freeCamObj.rotation = cameraT.rotation;
+			freeCamObj.GetComponent<FreeFlyCamera>().InitializeRotation();
+		}
+		cameraT.gameObject.SetActive(!_isFreeCamActive);
+	}
+	public bool IsFreeCamActive() => _isFreeCamActive;
 }

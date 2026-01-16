@@ -7,13 +7,34 @@ namespace Console.Commands
     {
         public override string Name => "help";
         public override string Description => "Display available commands";
+        public override CommandCategory commandCategory => CommandCategory.Console;
 
         public override void Execute(string[] args)
         {
+            DevConsole.Instance.NormalLog("Console commands");
             foreach (var commandPair in DevConsole.Instance.commands)
             {
                 var command = commandPair.Value;
-                DevConsole.Instance.NormalLog($"<color=Yellow>{command.Name}</color> - {command.Description}");
+
+                if (command.commandCategory == CommandCategory.Console)
+                {
+                    DevConsole.Instance.NormalLog(
+                        $"   <color=Yellow>{command.Name}</color> - {command.Description}"
+                    );
+                }
+            }
+            DevConsole.Instance.NormalLog(string.Empty);
+            DevConsole.Instance.NormalLog("Game commands");
+            foreach (var commandPair in DevConsole.Instance.commands)
+            {
+                var command = commandPair.Value;
+
+                if (command.commandCategory == CommandCategory.Game)
+                {
+                    DevConsole.Instance.NormalLog(
+                        $"   <color=Yellow>{command.Name}</color> - {command.Description}"
+                    );
+                }
             }
         }
     }
