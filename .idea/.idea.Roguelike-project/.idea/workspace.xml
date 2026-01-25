@@ -3,69 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e3cfe88f-0a8f-41ab-9e5c-ba25da3a59de" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Roguelike-project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Roguelike-project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Default/Settings/URP-Balanced.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Default/Settings/URP-Balanced.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Default/Settings/URP-HighFidelity.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Default/Settings/URP-HighFidelity.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Default/Settings/URP-Performant.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Default/Settings/URP-Performant.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Default/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Default/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/DemoScene.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/DemoScene/DemoScene_VFX.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/DemoScene/DemoScene_VFX.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Documentation.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Documentation/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Documentation/README.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Materials/M_Grid.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Materials/M_Grid.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Materials/M_Particles.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Materials/M_Particles.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Mesh.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Mesh/P_Cube.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Mesh/P_Cube.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Mesh/P_Octahedron.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Mesh/P_Octahedron.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Prefabs/Particules_Mesh.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Prefabs/Particules_Mesh/P_Cube.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Prefabs/Particules_Mesh/P_Cube.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Prefabs/Particules_Mesh/P_Octahedron.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Prefabs/Particules_Mesh/P_Octahedron.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Prefabs/VFX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Prefabs/VFX/VFX_FullOpaqueFire.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Prefabs/VFX/VFX_FullOpaqueFire.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Script.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Script/VFX_FireController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Script/VFX_FireController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Settings.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Settings/OptiFXPostProcessProfile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Settings/OptiFXPostProcessProfile.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Settings/OptiFXSkybox.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Settings/OptiFXSkybox.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Shader/S_GroundGrid.shadergraph" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Shader/S_GroundGrid.shadergraph.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Shader/S_Particle.shadergraph" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FullOpaqueFire/Shader/S_Particle.shadergraph.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character_v2.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character_v2.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Props/Barrel/Barrel.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Props/Barrel/Barrel.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Props/Barrel/Barrel_Tex.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Props/Barrel/Barrel_Tex.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Props/CampFire/Camp_fire.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Props/CampFire/Camp_fire.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Props/CampFire/Camp_fire_textures.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Props/CampFire/Camp_fire_textures.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Props/Chest/chest_textutre.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Props/Chest/chest_textutre.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Props/Rocks/Rock_Midle.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Props/Rocks/Rock_Midle.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Props/Rocks/Rocks_Massive.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Props/Rocks/Rocks_Massive.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Props/Skulls/Single Skull.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Props/Skulls/Single Skull.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Props/Skulls/Skull on stick 2.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Props/Skulls/Skull on stick 2.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Props/Skulls/Skull on stick.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Props/Skulls/Skull on stick.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Props/Skulls/Stick.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Props/Skulls/Stick.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Props/Trees/Pine.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Props/Trees/Pine.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Props/Trees/beech.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Props/Trees/beech.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/grass.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/grass.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/short_sword.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/short_sword.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/BaseScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BaseScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DevConsoleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DevConsoleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +94,8 @@
       <workItem from="1768043941209" duration="4129000" />
       <workItem from="1768507287185" duration="10991000" />
       <workItem from="1768550797988" duration="17887000" />
-      <workItem from="1768843415647" duration="4812000" />
+      <workItem from="1768843415647" duration="7132000" />
+      <workItem from="1769288851664" duration="895000" />
     </task>
     <servers />
   </component>
