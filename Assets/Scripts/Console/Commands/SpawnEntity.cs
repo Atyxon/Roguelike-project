@@ -6,6 +6,7 @@ namespace Console.Commands
     public class SpawnEntity : ConsoleCommand
     {
         public override string Name => "spawn_entity";
+        public override string Usage => "spawn_entity <entity_id>";
         public override string Description => "Spawn entity in front of player";
 
         public override void Execute(string[] args)
@@ -20,7 +21,7 @@ namespace Console.Commands
                 return;
             }
             if (!int.TryParse(args[1], out var index)) {
-                DevConsole.Instance.ErrorLog("Invalid entity index (not a number)");
+                DevConsole.Instance.ErrorLog($"Invalid entity index ({args[1]} is not a number)");
                 return;
             }
             if (index < 0 || index >= DevConsole.Instance.entitiesList.Length) {

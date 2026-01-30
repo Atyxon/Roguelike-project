@@ -30,13 +30,12 @@ namespace Console
         private string _consoleLogBuffer = string.Empty;
         private bool _isActive;
         private string _currentHint;
+        private readonly List<string> _commandHistory = new();
+        private int _historyIndex = -1;
 
         [Header("Lists")]
         public GameObject[] entitiesList;
-
-        // ------------------------
-        // Unity lifecycle
-        // ------------------------
+        
         private void Awake()
         {
             if (Instance != null)
@@ -95,6 +94,15 @@ namespace Console
             if (!_isActive || !inputField.isFocused)
                 return;
 
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                ShowPreviousCommand();
+            }
+            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                ShowNextCommand();
+            }
+            
             // TAB autocomplete
             if (Input.GetKeyDown(KeyCode.Tab))
             {
@@ -127,6 +135,13 @@ namespace Console
 
             Execute(inputField.text);
 
+            var submittedCommand = inputField.text;
+            if (_commandHistory.Count == 0 || _commandHistory[^1] != submittedCommand)
+            {
+                _commandHistory.Add(submittedCommand);
+            }
+            _historyIndex = _commandHistory.Count;
+            
             inputField.text = string.Empty;
             StartCoroutine(FocusInputNextFrame());
         }
@@ -221,6 +236,41 @@ namespace Console
             hintText.gameObject.SetActive(false);
         }
 
+        private void ShowPreviousCommand()
+        {
+            if (_commandHistory.Count == 0)
+                return;
+
+            _historyIndex--;
+            if (_historyIndex < 0)
+                _historyIndex = 0;
+
+            SetInputFromHistory();
+        }
+
+        private void ShowNextCommand()
+        {
+            if (_commandHistory.Count == 0)
+                return;
+
+            _historyIndex++;
+            if (_historyIndex >= _commandHistory.Count)
+            {
+                _historyIndex = _commandHistory.Count;
+                inputField.text = string.Empty;
+                return;
+            }
+
+            SetInputFromHistory();
+        }
+
+        private void SetInputFromHistory()
+        {
+            inputField.text = _commandHistory[_historyIndex];
+            inputField.caretPosition = inputField.text.Length;
+            ClearHint();
+        }
+        
         // ------------------------
         // Logging
         // ------------------------

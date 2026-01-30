@@ -19,7 +19,7 @@ namespace Console.Commands
                 if (command.commandCategory == CommandCategory.Console)
                 {
                     DevConsole.Instance.NormalLog(
-                        $"   <color=Yellow>{command.Name}</color> - {command.Description}"
+                        $"   <color=Yellow>{(string.IsNullOrEmpty(command.Usage) ? command.Name : command.Usage)}</color> - {command.Description}"
                     );
                 }
             }
@@ -32,7 +32,7 @@ namespace Console.Commands
                 if (command.commandCategory == CommandCategory.Game)
                 {
                     DevConsole.Instance.NormalLog(
-                        $"   <color=Yellow>{command.Name}</color> - {command.Description}"
+                        $"   <color=Yellow>{(string.IsNullOrEmpty(command.Usage) ? command.Name : command.Usage)}</color> - {command.Description}"
                     );
                 }
             }

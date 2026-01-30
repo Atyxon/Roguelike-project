@@ -43,7 +43,8 @@ public class PlayerController : MonoBehaviour
     private bool _fly;
 
     public bool isGrounded;
-
+    private float _airTime;
+    
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -89,12 +90,10 @@ public class PlayerController : MonoBehaviour
             ? currentSpeed / runSpeed
             : currentSpeed / walkSpeed * 0.5f;
 
-        animator.SetFloat(
-            AnimDefines.PARAMETER_SPEED_PERCENT,
-            animationSpeedPercent,
-            speedSmoothTime,
-            Time.deltaTime
-        );
+        animator.SetFloat(AnimDefines.PARAMETER_SPEED_PERCENT, animationSpeedPercent, speedSmoothTime, Time.deltaTime);
+
+        _airTime = isGrounded ? 0 : _airTime + Time.deltaTime;
+        animator.SetFloat(AnimDefines.PARAMETER_AIR_TIME, _airTime);
     }
 
     void Move(Vector2 inputDir, bool running)

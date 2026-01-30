@@ -6260,7 +6260,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 1
-  freeCamObj: {fileID: 0}
+  freeCamObj: {fileID: 6141966542107214441}
   dustParticles: {fileID: 806855818564627409}
   jumpParticles: {fileID: 8537780481758169172}
   flySpeed: 10
