@@ -2,8 +2,150 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3cfe88f-0a8f-41ab-9e5c-ba25da3a59de" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Console/Commands/PrintEntities.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Console/Commands/PrintEntities.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Console/Commands/SpawnEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Console/Commands/SpawnEntity.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Roguelike-project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Roguelike-project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BaseScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BaseScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Animations/Character_air_time.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Animations/Character_air_time.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Animations/Character_idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Animations/Character_idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Animations/Character_run.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Animations/Character_run.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Animations/Character_walk.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Animations/Character_walk.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Skies.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Skies/Sky_1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Skies/Sky_1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Skies/Sky_2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Skies/Sky_2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Skies/Sky_3.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Skies/Sky_3.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Skies/Sky_4.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Skies/Sky_4.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Skies/Sky_5.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Skies/Sky_5.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Skies/Sky_6.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Skies/Sky_6.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Skies/Sky_7.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Skies/Sky_7.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Skies/Sky_8.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Skies/Sky_8.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_1.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_1/Back_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_1/Back_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_1/Down_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_1/Down_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_1/Front_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_1/Front_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_1/Left_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_1/Left_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_1/Right_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_1/Right_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_1/Up_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_1/Up_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_2.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_2/Back_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_2/Back_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_2/Down_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_2/Down_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_2/Front_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_2/Front_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_2/Left_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_2/Left_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_2/Right_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_2/Right_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_2/Up_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_2/Up_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_3/Back_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_3/Back_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_3/Down_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_3/Down_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_3/Front_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_3/Front_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_3/Left_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_3/Left_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_3/Right_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_3/Right_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_3/Up_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_3/Up_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_4.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_4/Back_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_4/Back_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_4/Down_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_4/Down_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_4/Front_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_4/Front_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_4/Left_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_4/Left_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_4/Right_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_4/Right_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_4/Up_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_4/Up_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_5.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_5/Back_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_5/Back_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_5/Down_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_5/Down_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_5/Front_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_5/Front_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_5/Left_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_5/Left_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_5/Right_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_5/Right_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_5/Up_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_5/Up_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_6.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_6/Back_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_6/Back_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_6/Down_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_6/Down_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_6/Front_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_6/Front_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_6/Left_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_6/Left_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_6/Right_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_6/Right_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_6/Up_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_6/Up_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_7.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_7/Back_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_7/Back_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_7/Down_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_7/Down_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_7/Front_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_7/Front_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_7/Left_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_7/Left_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_7/Right_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_7/Right_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_7/Up_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_7/Up_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_8.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_8/Back_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_8/Back_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_8/Down_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_8/Down_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_8/Front_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_8/Front_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_8/Left_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_8/Left_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_8/Right_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_8/Right_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_8/Up_Tex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ColorSkies/Textures/Skybox_8/Up_Tex.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DevConsoleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DevConsoleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestingScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Console/DevConsole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Console/DevConsole.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +160,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Console/Commands/Quit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Console/Commands/ShowFps.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Console/StatsManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/NPC/NpcDiversityGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/NPC/NpcStats.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/FootIK.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachines/EnableRootMotion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tools/ArmatureUpdater.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@cd9db05bbc12/Editor/Data/Graphs/SerializableTexture.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -27,6 +172,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="35AJmt5DqtHqgJ3jVJ96AKsOix3" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -96,6 +244,10 @@
       <workItem from="1768550797988" duration="17887000" />
       <workItem from="1768843415647" duration="7132000" />
       <workItem from="1769288851664" duration="895000" />
+      <workItem from="1769365948761" duration="4435000" />
+      <workItem from="1769632667096" duration="1488000" />
+      <workItem from="1769706009862" duration="5620000" />
+      <workItem from="1769789466223" duration="2682000" />
     </task>
     <servers />
   </component>

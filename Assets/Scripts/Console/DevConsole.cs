@@ -9,11 +9,11 @@ namespace Console
     public class DevConsole : MonoBehaviour
     {
         public static DevConsole Instance { get; private set; }
-
         public Dictionary<string, IConsoleCommand> commands = new();
+        private const string ConsoleVer = "1.1";
 
         public PlayerController player;
-
+        
         [Header("Dev Console UI")]
         public GameObject consolePanel;
         public TMP_InputField inputField;
@@ -30,6 +30,9 @@ namespace Console
         private string _consoleLogBuffer = string.Empty;
         private bool _isActive;
         private string _currentHint;
+
+        [Header("Lists")]
+        public GameObject[] entitiesList;
 
         // ------------------------
         // Unity lifecycle
@@ -58,12 +61,12 @@ namespace Console
 
         private void WelcomeLog()
         {
-            GoodLog("--------------------------------------------------");
-            GoodLog("");
-            GoodLog("               Welcome to Console 1.0");
-            GoodLog("                Type 'help' to start");
-            GoodLog("");
-            GoodLog("--------------------------------------------------");
+            GoodLog($"--------------------------------------------------");
+            GoodLog($"");
+            GoodLog($"               Welcome to Console {ConsoleVer}");
+            GoodLog($"                Type 'help' to start");
+            GoodLog($"");
+            GoodLog($"--------------------------------------------------");
         }
 
         private void Update()
