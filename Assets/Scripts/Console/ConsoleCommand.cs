@@ -15,6 +15,7 @@ namespace Console
             set => throw new System.NotImplementedException();
         }
         public abstract string Name { get; }
+        public virtual string Usage => string.Empty;
         public abstract string Description { get; }
 
         public abstract void Execute(string[] args);

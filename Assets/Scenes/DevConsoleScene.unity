@@ -268,7 +268,7 @@ RectTransform:
   m_Children:
   - {fileID: 1172349219}
   - {fileID: 1042979147}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1900680002}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -610,12 +610,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123776193}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1900680002}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1172349218
 GameObject:
@@ -1169,7 +1169,6 @@ GameObject:
   - component: {fileID: 1900680002}
   - component: {fileID: 1900680001}
   - component: {fileID: 1900680003}
-  - component: {fileID: 1900680004}
   m_Layer: 0
   m_Name: ConsoleObject
   m_TagString: Untagged
@@ -1196,6 +1195,8 @@ MonoBehaviour:
   hintText: {fileID: 1750174573}
   statsText: {fileID: 1042979148}
   statsManager: {fileID: 1900680003}
+  entitiesList:
+  - {fileID: 1948527004359228324, guid: 046bbf6ff6082d3409e0b631747f6cd9, type: 3}
 --- !u!4 &1900680002
 Transform:
   m_ObjectHideFlags: 0
@@ -1208,7 +1209,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 416146625}
+  - {fileID: 1123776196}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1900680003
@@ -1223,21 +1226,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b0327b421c69142bd9773245c42c6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Console.StatsManager
---- !u!114 &1900680004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1900680000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ca74ff352fb788438f82f8fed72bd3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ColliderVisualizerURP
-  Show: 1
-  color: {r: 0, g: 1, b: 0, a: 1}
-  circleSegments: 24
 --- !u!1 &2067395834
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,5 +1390,3 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1900680002}
-  - {fileID: 416146625}
-  - {fileID: 1123776196}
