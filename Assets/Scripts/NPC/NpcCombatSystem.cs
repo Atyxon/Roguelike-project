@@ -15,7 +15,7 @@ public class NpcCombatSystem : MonoBehaviour
 
     public void HitPlayer(GameObject player)
     {
-        print($"Hit {player}");
+        player.SendMessage("ApplyHealth", -15);
     }
 
     public void EnableCollider()

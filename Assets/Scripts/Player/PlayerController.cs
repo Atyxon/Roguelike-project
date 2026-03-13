@@ -44,12 +44,15 @@ public class PlayerController : MonoBehaviour
 
     public bool isGrounded;
     private float _airTime;
+
+    public PlayerStatusSystem status;
     
     void Start()
     {
         animator = GetComponent<Animator>();
         cameraT = Camera.main.transform;
         controller = GetComponent<CharacterController>();
+        status = GetComponent<PlayerStatusSystem>();
         LoadDevConsole();
     }
 
@@ -65,8 +68,9 @@ public class PlayerController : MonoBehaviour
         if (canReadInput)
         {
             input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-            running = Input.GetKey(KeyCode.LeftShift);
             jumpPressed = Input.GetKeyDown(KeyCode.Space);
+            if(status.staminaCurrent > 0)
+                running = Input.GetKey(KeyCode.LeftShift);
         }
 
         Vector2 inputDir = input.normalized;
@@ -110,6 +114,9 @@ public class PlayerController : MonoBehaviour
 
         if (isGrounded)
         {
+            if(running)
+                status.ApplyStamina(-15*Time.deltaTime);
+            
             var targetSpeed = (running ? runSpeed : walkSpeed) * inputDir.magnitude;
             currentSpeed = Mathf.SmoothDamp(currentSpeed, targetSpeed, ref speedSmoothVelocity, GetModifiedSmoothTime(speedSmoothTime), Mathf.Infinity, Time.unscaledDeltaTime);
         }
@@ -162,12 +169,13 @@ public class PlayerController : MonoBehaviour
     
     void Jump()
     {
-        if (controller.isGrounded)
+        if (controller.isGrounded && status.staminaCurrent > 0)
         {
             animator.SetTrigger(AnimDefines.PARAMETER_JUMP);
             jumpParticles.Play();
             var jumpVelocity = Mathf.Sqrt(-2 * gravity * jumpHeight);
             velocityY = jumpVelocity;
+            status.ApplyStamina(-20);
         }
     }
 
