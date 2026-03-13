@@ -346,6 +346,12 @@ Transform:
   - {fileID: 2136295629}
   m_Father: {fileID: 894897636}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &272622702 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8526934479633764252, guid: c54ff3a63bf7ac54b9b3c0fa8c63a1f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1183910570972902175}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,11 +1603,51 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2279434557443975655, guid: c54ff3a63bf7ac54b9b3c0fa8c63a1f9,
+        type: 3}
+      propertyPath: m_WarningMessage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3938657268293631717, guid: c54ff3a63bf7ac54b9b3c0fa8c63a1f9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.024
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758565237857134887, guid: c54ff3a63bf7ac54b9b3c0fa8c63a1f9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6202006277061420361, guid: c54ff3a63bf7ac54b9b3c0fa8c63a1f9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6202006277061420361, guid: c54ff3a63bf7ac54b9b3c0fa8c63a1f9,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 7140615346338496597, guid: c54ff3a63bf7ac54b9b3c0fa8c63a1f9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7336084375607782915, guid: c54ff3a63bf7ac54b9b3c0fa8c63a1f9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7340201872233720575, guid: c54ff3a63bf7ac54b9b3c0fa8c63a1f9,
         type: 3}
       propertyPath: m_Constraints
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8140877024777684406, guid: c54ff3a63bf7ac54b9b3c0fa8c63a1f9,
+        type: 3}
+      propertyPath: groundCheck
+      value: 
+      objectReference: {fileID: 272622702}
     - target: {fileID: 8230458855643205739, guid: c54ff3a63bf7ac54b9b3c0fa8c63a1f9,
         type: 3}
       propertyPath: m_LocalPosition.x

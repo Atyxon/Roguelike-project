@@ -14,25 +14,8 @@ namespace Console.Commands
 
         public override void Execute(string[] args)
         {
-            var scenesToReload = Enumerable.Range(0, SceneManager.sceneCount)
-                .Select(i => SceneManager.GetSceneAt(i))
-                .Where(s => s.isLoaded && s.name != "DevConsoleScene")
-                .ToList();
-
-            foreach (var scene in scenesToReload)
-            {
-                SceneManager.UnloadSceneAsync(scene);
-            }
-
-            foreach (var scene in scenesToReload)
-            {
-                SceneManager.LoadScene(scene.name, LoadSceneMode.Additive);
-            }
-
-            if (scenesToReload.Count > 0)
-            {
-                SceneManager.SetActiveScene(SceneManager.GetSceneByName(scenesToReload[0].name));
-            }
+            var currentScene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(currentScene.name);
         }
     }
 }

@@ -86,14 +86,16 @@ public class PlayerController : MonoBehaviour
         var dustParticlesEmission = dustParticles.emission;
         dustParticlesEmission.enabled = (currentSpeed > runSpeed * 0.7f) && controller.isGrounded;
 
-        float animationSpeedPercent = running
-            ? currentSpeed / runSpeed
-            : currentSpeed / walkSpeed * 0.5f;
-
-        animator.SetFloat(AnimDefines.PARAMETER_SPEED_PERCENT, animationSpeedPercent, speedSmoothTime, Time.deltaTime);
-
+        if (isGrounded)
+        {
+            var animationSpeedPercent = running ? currentSpeed / runSpeed : currentSpeed / walkSpeed * 0.5f;
+            animator.SetFloat(AnimDefines.PARAMETER_SPEED_PERCENT, animationSpeedPercent, speedSmoothTime, Time.deltaTime);
+        }
         _airTime = isGrounded ? 0 : _airTime + Time.deltaTime;
-        animator.SetFloat(AnimDefines.PARAMETER_AIR_TIME, _airTime);
+        if (_airTime > 0.4f)
+        {
+            animator.SetFloat(AnimDefines.PARAMETER_AIR_TIME, (_airTime/3)-0.4f);
+        }
     }
 
     void Move(Vector2 inputDir, bool running)
@@ -101,26 +103,36 @@ public class PlayerController : MonoBehaviour
         if (inputDir != Vector2.zero)
         {
             var targetRotation = Mathf.Atan2(inputDir.x, inputDir.y) * Mathf.Rad2Deg + cameraT.eulerAngles.y;
-            transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref turnSmoothVelocity, GetModifiedSmoothTime(turnSmoothTime));
+            var smoothTime = GetModifiedSmoothTime(turnSmoothTime);
+
+            transform.rotation = Quaternion.Euler(0f, Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref turnSmoothVelocity, smoothTime), 0f);
         }
 
-        var targetSpeed = ((running) ? runSpeed : walkSpeed) * inputDir.magnitude;
-        currentSpeed = Mathf.SmoothDamp(currentSpeed, targetSpeed, ref speedSmoothVelocity, GetModifiedSmoothTime(speedSmoothTime));
-
-        velocityY += Time.deltaTime * gravity;
-        var velocity = transform.forward * currentSpeed + Vector3.up * velocityY;
-
-        controller.Move(velocity * Time.deltaTime);
-        currentSpeed = new Vector2(controller.velocity.x, controller.velocity.z).magnitude;
-
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        if (isGrounded)
+        {
+            var targetSpeed = (running ? runSpeed : walkSpeed) * inputDir.magnitude;
+            currentSpeed = Mathf.SmoothDamp(currentSpeed, targetSpeed, ref speedSmoothVelocity, GetModifiedSmoothTime(speedSmoothTime), Mathf.Infinity, Time.unscaledDeltaTime);
+        }
 
         if (controller.isGrounded)
         {
-            velocityY = 0;
+            if (velocityY < 0f)
+                velocityY = -2f;
+        }
+        else
+        {
+            velocityY += gravity * Time.deltaTime;
         }
 
-        animator.SetBool(AnimDefines.PARAMETER_IN_AIR, isGrounded == false);
+        Vector3 forward = Vector3.ProjectOnPlane(transform.forward, Vector3.up).normalized;
+        Vector3 velocity = forward * currentSpeed + Vector3.up * velocityY;
+
+        controller.Move(velocity * Time.deltaTime);
+
+        currentSpeed = new Vector2(controller.velocity.x, controller.velocity.z).magnitude;
+        isGrounded = controller.isGrounded;
+
+        animator.SetBool(AnimDefines.PARAMETER_IN_AIR, !isGrounded);
     }
 
     void FlyMove(Vector2 inputDir, bool running, bool ascend)
@@ -147,12 +159,12 @@ public class PlayerController : MonoBehaviour
         animator.SetBool(AnimDefines.PARAMETER_IN_AIR, true);
         animator.SetFloat(AnimDefines.PARAMETER_SPEED_PERCENT, 1);
     }
-
-
+    
     void Jump()
     {
         if (controller.isGrounded)
         {
+            animator.SetTrigger(AnimDefines.PARAMETER_JUMP);
             jumpParticles.Play();
             var jumpVelocity = Mathf.Sqrt(-2 * gravity * jumpHeight);
             velocityY = jumpVelocity;

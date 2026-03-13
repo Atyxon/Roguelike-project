@@ -1,5 +1,74 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2307013114277597094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8292158065985046468}
+  - component: {fileID: 6462043180810773791}
+  - component: {fileID: 3378136269394303457}
+  m_Layer: 8
+  m_Name: collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8292158065985046468
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2307013114277597094}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4099673883559724926}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6462043180810773791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2307013114277597094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d09914a1542bbe4f9957e215b00b6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponCollider
+  cs: {fileID: 2607960819854292921}
+--- !u!136 &3378136269394303457
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2307013114277597094}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.006
+  m_Height: 0.08
+  m_Direction: 1
+  m_Center: {x: -0.0000000020097801, y: -0.016859282, z: 0.000000024179169}
 --- !u!1001 &1714718265719867125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11,17 +80,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 77d421fd2f50ae64190cc2f173b69d15,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.64219
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 77d421fd2f50ae64190cc2f173b69d15,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.07
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 77d421fd2f50ae64190cc2f173b69d15,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.94292
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 77d421fd2f50ae64190cc2f173b69d15,
         type: 3}
@@ -82,7 +151,7 @@ PrefabInstance:
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: cf883c60c71bb3d4188831f48dd6e43e, type: 2}
+      objectReference: {fileID: 2100000, guid: c97f8b4c0bee25a40a13f88eafb1e446, type: 2}
     - target: {fileID: -4283402837337339341, guid: 77d421fd2f50ae64190cc2f173b69d15,
         type: 3}
       propertyPath: m_Layer
@@ -255,6 +324,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8354520550502082299}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 77d421fd2f50ae64190cc2f173b69d15,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2607960819854292921}
   m_SourcePrefab: {fileID: 100100000, guid: 77d421fd2f50ae64190cc2f173b69d15, type: 3}
 --- !u!1 &1948527004359228324 stripped
 GameObject:
@@ -388,6 +461,20 @@ MonoBehaviour:
   - {fileID: 5513294983258212754}
   - {fileID: 3320684423402727256}
   - {fileID: 2890034602353576207}
+  randomisedSize: 0
+--- !u!114 &2607960819854292921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948527004359228324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba2cfdae1db9d854c86d9c3df6e147b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NpcCombatSystem
+  currentWeapon: {fileID: 6462043180810773791}
 --- !u!1 &2890034602353576207 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4625038462473203718, guid: 77d421fd2f50ae64190cc2f173b69d15,
@@ -503,7 +590,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: f6ca8a26bdcca3f4285f2b1357f3dcf6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8292158065985046468}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6ca8a26bdcca3f4285f2b1357f3dcf6, type: 3}
 --- !u!4 &4099673883559724926 stripped

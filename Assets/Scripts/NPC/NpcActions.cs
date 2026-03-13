@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Console;
+using NPC;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
@@ -24,19 +25,19 @@ public class NpcActions : MonoBehaviour
     [Header("Cover")]
     public LayerMask coverLayer;
 
-    private float lastAttackTime;
-    private bool isBusy;
+    private float _lastAttackTime;
+    private bool _isBusy;
 
-    private NpcStats stats;
-
-    void Awake()
-    {
-        stats = GetComponent<NpcStats>();
-        player = DevConsole.Instance.player.transform;
-    }
+    private NpcStats _stats;
+    private NpcDiversityGenerator _npcDiversityGenerator;
 
     private void Start()
     {
+        _stats = GetComponent<NpcStats>();
+        _npcDiversityGenerator = GetComponent<NpcDiversityGenerator>();
+        player = DevConsole.Instance.player.transform;
+        attackRange = _npcDiversityGenerator.randomisedSize*.7f;
+        
         agent.updatePosition = true;
         agent.updateRotation = true;
         animator.applyRootMotion = false;
@@ -61,36 +62,25 @@ public class NpcActions : MonoBehaviour
         if (!agent.updatePosition)
             agent.nextPosition = transform.position;
     }
-
-    public void Attack()
-    {
-        if (isBusy) return;
-        if (Time.time < lastAttackTime + attackCooldown) return;
-        
-        StartCoroutine(AttackRoutine());
-    }
-
     public void Flank()
     {
-        if (isBusy) return;
+        if (_isBusy) return;
 
         Vector3 flankPos = GetFlankPosition();
         MoveTo(flankPos);
     }
-
     public void KeepDistance()
     {
-        if (isBusy) return;
+        if (_isBusy) return;
 
         Vector3 dir = (transform.position - player.position).normalized;
         Vector3 targetPos = player.position + dir * keepDistanceRange;
 
         MoveTo(targetPos);
     }
-
     public void Hide()
     {
-        if (isBusy) return;
+        if (_isBusy) return;
 
         Transform cover = FindNearestCover();
         if (cover == null) return;
@@ -134,10 +124,16 @@ public class NpcActions : MonoBehaviour
         agent.isStopped = false;
         agent.SetDestination(destination + randomOffset);
     }
-
+    public void Attack()
+    {
+        if (_isBusy) return;
+        if (Time.time < _lastAttackTime + attackCooldown) return;
+        
+        StartCoroutine(AttackRoutine());
+    }
     private IEnumerator AttackRoutine()
     {
-        isBusy = true;
+        _isBusy = true;
 
         agent.stoppingDistance = attackRange;
         agent.isStopped = false;
@@ -165,7 +161,7 @@ public class NpcActions : MonoBehaviour
             Debug.Log("NPC gave up chasing player.");
 
             agent.ResetPath();
-            isBusy = false;
+            _isBusy = false;
             yield break;
         }
 
@@ -187,11 +183,11 @@ public class NpcActions : MonoBehaviour
 
         animator.SetTrigger("Attack");
 
-        lastAttackTime = Time.time;
+        _lastAttackTime = Time.time;
 
         yield return new WaitForSeconds(.2f);
 
-        isBusy = false;
+        _isBusy = false;
     }
 
     /* ==========================

@@ -5339,7 +5339,7 @@ GameObject:
   - component: {fileID: 8230458855643205739}
   m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6185,6 +6185,7 @@ GameObject:
   - component: {fileID: 6859297799198033757}
   - component: {fileID: 8415511117639678696}
   - component: {fileID: 6202006277061420361}
+  - component: {fileID: 2675718737537647060}
   m_Layer: 3
   m_Name: Character
   m_TagString: Untagged
@@ -6422,6 +6423,29 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0.9, z: 0}
   m_TimeToStationary: 0.5
+--- !u!136 &2675718737537647060
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4758565237857134887}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.2
+  m_Height: 1.8
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!1 &4782094077777313093
 GameObject:
   m_ObjectHideFlags: 0

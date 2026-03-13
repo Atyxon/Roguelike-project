@@ -52,10 +52,18 @@ namespace Console
             consolePanel.SetActive(false);
             hintText.gameObject.SetActive(false);
 
-            player = FindFirstObjectByType<PlayerController>();
+            FindPlayer();
 
             inputField.onValueChanged.AddListener(OnInputChanged);
             WelcomeLog();
+        }
+
+        public void FindPlayer()
+        {
+            if (player == null)
+            {
+                player = FindFirstObjectByType<PlayerController>();
+            }
         }
 
         private void WelcomeLog()
@@ -125,7 +133,8 @@ namespace Console
                 return;
 
             ClearHint();
-
+            FindPlayer();
+            
             if (string.IsNullOrWhiteSpace(inputField.text))
             {
                 UserLog("");

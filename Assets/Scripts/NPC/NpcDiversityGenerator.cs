@@ -6,9 +6,10 @@ namespace NPC
     {
         public Vector2 sizeMinMax;
         public GameObject[] randomObjects;
-        void Start()
+        public float randomisedSize;
+        void Awake()
         {
-            var randomisedSize = Random.Range(sizeMinMax.x, sizeMinMax.y);
+            randomisedSize = Random.Range(sizeMinMax.x, sizeMinMax.y);
             transform.localScale = new Vector3(
                 transform.localScale.x * randomisedSize,
                 transform.localScale.y * randomisedSize,

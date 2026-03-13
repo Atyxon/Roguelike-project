@@ -2,21 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3cfe88f-0a8f-41ab-9e5c-ba25da3a59de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Console/Commands/RestartScene.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Console/Commands/RestartScene.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Console/Commands/SetTimeScale.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Console/Commands/SetTimeScale.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Roguelike-project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Roguelike-project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Animations/Character_animations/Character_air_time.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Animations/Character_animations/Character_air_time.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Animations/Character_animations/Character_falling.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Animations/Character_animations/Character_falling.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Animations/Character_animations/Character_run_jump.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Animations/Character_animations/Character_run_jump.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Animations/Goblin/goblin_attack_1.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Animations/Goblin/goblin_attack_1.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animation/Controlers/MainCharacter.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Controlers/MainCharacter.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Default/Settings/URP-Balanced.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Default/Settings/URP-Balanced.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Default/Settings/URP-HighFidelity.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Default/Settings/URP-HighFidelity.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Default/Settings/URP-Performant.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Default/Settings/URP-Performant.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Default/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Default/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Entities/Goblin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Entities/Goblin.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Camp_fire 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Camp_fire 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DevConsoleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DevConsoleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestingScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonDefines.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CommonDefines.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Console/Commands/Help.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Console/Commands/Help.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Console/Commands/SpawnEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Console/Commands/SpawnEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Console/ConsoleCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Console/ConsoleCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Console/Commands/RestartScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Console/Commands/RestartScene.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Console/DevConsole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Console/DevConsole.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Console/IConsoleCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Console/IConsoleCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/NpcActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/NpcActions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC/NpcDiversityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC/NpcDiversityGenerator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/blood_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/blood_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +39,14 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Console/Commands/Quit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Console/Commands/ShowFps.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Console/StatsManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/NPC/NpcCombatSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/NPC/NpcDiversityGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/NPC/NpcStats.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/FootIK.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachines/EnableRootMotion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tools/ArmatureUpdater.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponCollider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@cd9db05bbc12/Editor/Data/Graphs/SerializableTexture.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -118,7 +128,11 @@
       <workItem from="1769365948761" duration="4435000" />
       <workItem from="1769632667096" duration="1488000" />
       <workItem from="1769706009862" duration="5620000" />
-      <workItem from="1769789466223" duration="7334000" />
+      <workItem from="1769789466223" duration="12641000" />
+      <workItem from="1769862693202" duration="3137000" />
+      <workItem from="1770311556109" duration="1575000" />
+      <workItem from="1771859455356" duration="2735000" />
+      <workItem from="1772263458145" duration="2968000" />
     </task>
     <servers />
   </component>

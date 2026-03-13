@@ -3,6 +3,7 @@
     public static string PARAMETER_SPEED_PERCENT = "speedPercent";
     public static string PARAMETER_IN_AIR = "inAir";
     public static string PARAMETER_AIR_TIME = "airTime";
+    public static string PARAMETER_JUMP = "jump";
 }
 
 public static class GameobjectTags
